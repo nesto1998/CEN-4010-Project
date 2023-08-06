@@ -5,8 +5,25 @@
     <meta charset="UTF-8">
     <title>VolunteerNow</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: linear-gradient(to right, #333, #333);
+            background-color: #ffffff; /* You can change this to your preferred background color */
+            font-family: Arial, sans-serif
+            
+
+        }
+        .wrapper{
+            flex:1;
+        }
        
         .combined-section {
+            background-image: linear-gradient(to right, #667eea, #764ba2);
             position: absolute;
             top: 150px;
             left: 20%;
@@ -19,6 +36,7 @@
 
         /* section for the messages received */
         .messages-container {
+            background-image: linear-gradient(to right, #667eea, #764ba2);
             width: 50%;
             padding: 10px;
             font-size: 16px;
@@ -28,11 +46,12 @@
         }
 
         .user-icon {
+            background-image: linear-gradient(to right, #667eea, #764ba2);
             width: 30px;
             height: 30px;
             border-radius: 50%;
             background-color: #07ace8;
-            color: #fff;
+            color: #333;
             font-size: 20px;
             display: inline-flex;
             justify-content: center;
@@ -42,6 +61,7 @@
 
         /*  section for the opened message */
         .message-section {
+            background-image: linear-gradient(to right, #667eea, #764ba2);
             width: 82%; /* Adjust the width */
             padding: 10px;
             font-size: 16px;
@@ -59,14 +79,14 @@
             justify-content: space-between;
             align-items: center;
             padding: 5px; /*  adjust padding to make buttons smaller */
-            background-color: #f0f0f0;
+            background-color: #333;
         }
 
         .reply-buttons button {
             padding: 5px 10px; /* adjust padding to make buttons smaller */
             font-size: 12px; /* adjust font size to mkae font smaller */
-            background-color: #07ace8;
-            color: #fff;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            color: #333;
             border: none;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -76,21 +96,21 @@
         .reply-buttons button:hover {
             background-color: #764ba2;
         }
+        .footer a {
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+            text-align: center;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            
+        }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="button-item">
-            <button class="btn">Home</button>
-            <button class="btn">Search</button>
-            <button class="btn" style="background-color:#03d3f8;">Messages</button>
-            <button class="btn">Schedule</button>
-            <button class="btn">Settings</button>
-            <button class="btn">Logout</button>
-        </div>
-    </header>
-
+   
+ <div class="wrapper">
     <div class="combined-section">
         <!-- Left side (messages) -->
         <div class="messages-container">
@@ -98,29 +118,29 @@
                 <div class="user-icon">AB</div>
                 <!--<p><strong> full name </strong></p>-->
                 <p>Date: 08/01/2023</p>
-                <hr>
                 <p>Hi , after reviweing your profile i would like to speak with you.</p>
+                <hr>
             </div>
             <div onclick="scrollToMessage('message2')">
                 <div class="user-icon">JG</div>
                 <!--<p><strong> full name </strong></p> -->
                 <p>Date: 07/28/2023</p>
-                <hr>
                 <p>Hey!!, your experinces matches to what we look for ,please reply. <p>
+                <hr>
             </div>
             <div onclick="scrollToMessage('message3')">
                 <div class="user-icon">PW</div>
                 <!--<p><strong> full name </strong></p> -->
                 <p>Date: 07/26/2023</p>
-                <hr>
                 <p>Hi, unfortunately we don't have any spot available.</p>
+                <hr>
             </div>
             <div onclick="scrollToMessage('message4')">
                 <div class="user-icon">EB</div>
                 <!--<p><strong> full name </strong></p> in case you want to show the entire name-->
                 <p>Date: 06/30/2023</p>
-                <hr>
                 <p>Hi, we recieved your application but we are missing your...</p>
+                <hr>
             </div>
             <!-- Add more messages here -->
         </div>
@@ -145,6 +165,7 @@
             </div>
         </div>
     </div>
+ </div>
 
     <!--if you want to implement java this could be a start if not delete-->
 
